@@ -1,0 +1,78 @@
+/* Apply base styles to the body */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #000;
+  box-sizing: border-box;
+}
+
+/* Calculator container */
+.calculator {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Display input at the top */
+#display {
+  width: 100%;
+  padding: 25px;
+  font-size: 36px;
+  text-align: right;
+  border: none;
+  outline: none;
+  background-color: #eee;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* Grid layout for calculator buttons */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0; /* No gap between buttons */
+}
+
+/* General button style */
+.btn {
+  padding: 30px;
+  font-size: 26px;
+  color: #000;
+  border: 1px solid #000;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover effect for all buttons */
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Operator buttons (like +, -, =, etc.) */
+.operator {
+  background-color: #f0ad4e;
+  color: #000;
+}
+
+/* Operator hover effect */
+.operator:hover {
+  background-color: #ec971f;
+}
+
+/* Make the 0 button span two columns */
+.zero {
+  grid-column: span 2;
+}
